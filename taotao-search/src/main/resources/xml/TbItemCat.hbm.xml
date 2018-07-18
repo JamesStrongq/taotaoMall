@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.search.pojo.TbItemCat" table="tb_item_cat">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="parentId" type="java.lang.Long">
+            <column name="parent_id">
+                <comment>
+                &#184;&#184;&#192;&#224;&#196;&#191;ID=0&#202;&#177;&#163;&#172;&#180;&#250;&#177;&#237;&#181;&#196;&#202;&#199;&#210;&#187;&#188;&#182;&#181;&#196;&#192;&#224;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50">
+                <comment>&#192;&#224;&#196;&#191;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status">
+                <comment>&#215;&#180;&#204;&#172;&#161;&#163;&#191;&#201;&#209;&#161;&#214;&#181;:1(&#213;&#253;&#179;&#163;),2(&#201;&#190;&#179;&#253;)</comment>
+            </column>
+        </property>
+        <property name="sortOrder" type="java.lang.Integer">
+            <column name="sort_order">
+                <comment>
+                &#197;&#197;&#193;&#208;&#208;&#242;&#186;&#197;&#163;&#172;&#177;&#237;&#202;&#190;&#205;&#172;&#188;&#182;&#192;&#224;&#196;&#191;&#181;&#196;&#213;&#185;&#207;&#214;&#180;&#206;&#208;&#242;&#163;&#172;&#200;&#231;&#202;&#253;&#214;&#181;&#207;&#224;&#181;&#200;&#212;&#242;&#176;&#180;&#195;&#251;&#179;&#198;&#180;&#206;&#208;&#242;&#197;&#197;&#193;&#208;&#161;&#163;&#200;&#161;&#214;&#181;&#183;&#182;&#206;&#167;:&#180;&#243;&#211;&#218;&#193;&#227;&#181;&#196;&#213;&#251;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="isParent" type="java.lang.Boolean">
+            <column name="is_parent">
+                <comment>
+                &#184;&#195;&#192;&#224;&#196;&#191;&#202;&#199;&#183;&#241;&#206;&#170;&#184;&#184;&#192;&#224;&#196;&#191;&#163;&#172;1&#206;&#170;true&#163;&#172;0&#206;&#170;false</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

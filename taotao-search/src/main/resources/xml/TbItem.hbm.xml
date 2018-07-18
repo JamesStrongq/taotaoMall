@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.search.pojo.TbItem" table="tb_item">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="100" not-null="true">
+                <comment>&#201;&#204;&#198;&#183;&#177;&#234;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="sellPoint" type="string">
+            <column name="sell_point" length="500">
+                <comment>&#201;&#204;&#198;&#183;&#194;&#244;&#181;&#227;</comment>
+            </column>
+        </property>
+        <property name="price" type="long">
+            <column name="price" not-null="true">
+                <comment>&#201;&#204;&#198;&#183;&#188;&#219;&#184;&#241;&#163;&#172;&#181;&#165;&#206;&#187;&#206;&#170;&#163;&#186;&#183;&#214;</comment>
+            </column>
+        </property>
+        <property name="num" type="int">
+            <column name="num" not-null="true">
+                <comment>&#191;&#226;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="barcode" type="string">
+            <column name="barcode" length="30">
+                <comment>&#201;&#204;&#198;&#183;&#204;&#245;&#208;&#206;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="image" type="string">
+            <column name="image" length="500">
+                <comment>&#201;&#204;&#198;&#183;&#205;&#188;&#198;&#172;</comment>
+            </column>
+        </property>
+        <property name="cid" type="long">
+            <column name="cid" not-null="true">
+                <comment>&#203;&#249;&#202;&#244;&#192;&#224;&#196;&#191;&#163;&#172;&#210;&#182;&#215;&#211;&#192;&#224;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="status" type="byte">
+            <column name="status" not-null="true">
+                <comment>
+                &#201;&#204;&#198;&#183;&#215;&#180;&#204;&#172;&#163;&#172;1-&#213;&#253;&#179;&#163;&#163;&#172;2-&#207;&#194;&#188;&#220;&#163;&#172;3-&#201;&#190;&#179;&#253;</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" not-null="true">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

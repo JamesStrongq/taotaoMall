@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.pojo.TbUser" table="tb_user">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" unique="true">
+                <comment>&#211;&#195;&#187;&#167;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="32" not-null="true">
+                <comment>&#195;&#220;&#194;&#235;&#163;&#172;&#188;&#211;&#195;&#220;&#180;&#230;&#180;&#162;</comment>
+            </column>
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="20" unique="true">
+                <comment>&#215;&#162;&#178;&#225;&#202;&#214;&#187;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" unique="true">
+                <comment>&#215;&#162;&#178;&#225;&#211;&#202;&#207;&#228;</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" not-null="true" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

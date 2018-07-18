@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.pojo.TbOrderItem" table="tb_order_item">
+        <id name="id" type="string">
+            <column name="id" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="itemId" type="string">
+            <column name="item_id" length="50" not-null="true">
+                <comment>&#201;&#204;&#198;&#183;id</comment>
+            </column>
+        </property>
+        <property name="orderId" type="string">
+            <column name="order_id" length="50" not-null="true">
+                <comment>&#182;&#169;&#181;&#165;id</comment>
+            </column>
+        </property>
+        <property name="num" type="java.lang.Integer">
+            <column name="num">
+                <comment>&#201;&#204;&#198;&#183;&#185;&#186;&#194;&#242;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="200">
+                <comment>&#201;&#204;&#198;&#183;&#177;&#234;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="price" type="java.lang.Long">
+            <column name="price">
+                <comment>&#201;&#204;&#198;&#183;&#181;&#165;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="totalFee" type="java.lang.Long">
+            <column name="total_fee">
+                <comment>&#201;&#204;&#198;&#183;&#215;&#220;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="picPath" type="string">
+            <column name="pic_path" length="200">
+                <comment>&#201;&#204;&#198;&#183;&#205;&#188;&#198;&#172;&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

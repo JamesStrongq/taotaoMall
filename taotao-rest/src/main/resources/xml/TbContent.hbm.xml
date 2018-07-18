@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.pojo.TbContent" table="tb_content">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="categoryId" type="long">
+            <column name="category_id" not-null="true">
+                <comment>&#196;&#218;&#200;&#221;&#192;&#224;&#196;&#191;ID</comment>
+            </column>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="200">
+                <comment>&#196;&#218;&#200;&#221;&#177;&#234;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="subTitle" type="string">
+            <column name="sub_title" length="100">
+                <comment>&#215;&#211;&#177;&#234;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="titleDesc" type="string">
+            <column name="title_desc" length="500">
+                <comment>&#177;&#234;&#204;&#226;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="500">
+                <comment>&#193;&#180;&#189;&#211;</comment>
+            </column>
+        </property>
+        <property name="pic" type="string">
+            <column name="pic" length="300">
+                <comment>&#205;&#188;&#198;&#172;&#190;&#248;&#182;&#212;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="pic2" type="string">
+            <column name="pic2" length="300">
+                <comment>&#205;&#188;&#198;&#172;2</comment>
+            </column>
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="65535">
+                <comment>&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

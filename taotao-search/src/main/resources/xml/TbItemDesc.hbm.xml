@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.search.pojo.TbItemDesc" table="tb_item_desc">
+        <id name="itemId" type="long">
+            <column name="item_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="itemDesc" type="string">
+            <column name="item_desc" length="65535">
+                <comment>&#201;&#204;&#198;&#183;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19">
+                <comment>&#184;&#252;&#208;&#194;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

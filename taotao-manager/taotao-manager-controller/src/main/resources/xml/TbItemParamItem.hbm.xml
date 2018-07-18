@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-2-2 22:22:32 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="com.taotao.pojo.TbItemParamItem" table="tb_item_param_item">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="itemId" type="java.lang.Long">
+            <column name="item_id">
+                <comment>&#201;&#204;&#198;&#183;ID</comment>
+            </column>
+        </property>
+        <property name="paramData" type="string">
+            <column name="param_data" length="65535">
+                <comment>&#178;&#206;&#202;&#253;&#202;&#253;&#190;&#221;&#163;&#172;&#184;&#241;&#202;&#189;&#206;&#170;json&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
